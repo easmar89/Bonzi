@@ -4,5 +4,6 @@ export default interface Products {
   description: string;
   imgUrl: string;
   price: number;
+  stock: number;
   quantity: number;
 }

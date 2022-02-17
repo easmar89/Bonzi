@@ -16,7 +16,8 @@ const data: Products[] = [
       "This Ficus, the most popular indoor bonsai, is 5-8 inch tall and very easy to care for.",
     imgUrl: goldenGateFicusSmall,
     price: 44,
-    quantity: 8,
+    quantity: 0,
+    stock: 8,
   },
   {
     id: 2,
@@ -25,7 +26,8 @@ const data: Products[] = [
       "This larger Ficus (8-10 inch) has a stunning trunk movement and a fine ramification.",
     imgUrl: goldenGateFicusBig,
     price: 69,
-    quantity: 8,
+    quantity: 0,
+    stock: 8,
   },
   {
     id: 3,
@@ -34,7 +36,8 @@ const data: Products[] = [
       "This tree (8-12 inch) is one of the easiest indoor bonsai to grow, recommended for beginners.",
     imgUrl: dwarfJade,
     price: 49,
-    quantity: 8,
+    quantity: 0,
+    stock: 8,
   },
   {
     id: 4,
@@ -43,7 +46,8 @@ const data: Products[] = [
       "This Carmona (6-8 inch) showcases beautiful trunk texture and grows well indoors.",
     imgUrl: fukienTea,
     price: 49,
-    quantity: 8,
+    quantity: 0,
+    stock: 8,
   },
   {
     id: 5,
@@ -52,7 +56,8 @@ const data: Products[] = [
       "This Schefflera is one of the strongest trees to keep indoors, it is 4-7 inch tall.",
     imgUrl: hawaiianUmbrella,
     price: 34,
-    quantity: 8,
+    quantity: 0,
+    stock: 8,
   },
   {
     id: 6,
@@ -61,7 +66,8 @@ const data: Products[] = [
       "The most popular outdoor bonsai, this Juniper is 4-6 inch tall. Can not be shipped to CA.",
     imgUrl: greenMoundJuniper,
     price: 34,
-    quantity: 8,
+    quantity: 0,
+    stock: 8,
   },
   {
     id: 7,
@@ -69,7 +75,8 @@ const data: Products[] = [
     description: "This Ulmus thrives outdoors above 20 degrees, it is 6-10 inch tall.",
     imgUrl: chineseElm,
     price: 44,
-    quantity: 8,
+    quantity: 0,
+    stock: 8,
   },
 ];
 

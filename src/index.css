@@ -3,3 +3,83 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+main {
+  display: flex;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+  background-color: black;
+  align-items: center;
+  color: white;
+  padding: 3em 3rem;
+}
+
+.products {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 70vw;
+  gap: 5rem;
+}
+
+.product {
+  width: 400px;
+}
+
+.cart {
+  width: 30vw;
+  background-color: rgb(140, 204, 247);
+  text-align: center;
+}
+
+/* form div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+label {
+  display: block;
+  margin: 0.3rem 0;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+input {
+  width: 200px;
+  height: 30px;
+}
+
+.btn {
+  width: 70px;
+}
+
+.login button {
+  width: 100px;
+  height: 30px;
+}
+
+.welcome {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cart-list {
+  display: flex;
+  margin: 2em;
+  gap: 1em;
+  align-items: center;
+}
+
+.control-btn {
+  width: 30px;
+}

@@ -30,7 +30,11 @@ export default function Cart({ cart, setCart }: Props) {
     setCart(cartCopy);
   }
 
-  function removeItem(id: number) {}
+  function removeItem(id: number) {
+    let cartCopy = [...cart];
+    cartCopy = cartCopy.filter((item: any) => item.id != id);
+    setCart(cartCopy);
+  }
 
   return (
     <>

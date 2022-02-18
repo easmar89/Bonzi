@@ -9,6 +9,7 @@ import Login from "./components/Login";
 export default function App() {
   let [storedData, setStoredData] = useState(data);
   let [cart, setCart] = useState<object[]>([]);
+  let [searchValue, setSearchValue] = useState("");
 
   useEffect(() => {
     if (!localStorage.getItem("data")) {
@@ -20,12 +21,10 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("data", JSON.stringify(storedData));
-  }, [storedData]);
-
-  useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
+
+  function updateSearchValue() {}
 
   return (
     <>
@@ -34,6 +33,7 @@ export default function App() {
         <Login />
       </header>
       <main>
+        <input type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
         <div className="products">
           {storedData.map((plant: productsInterface, index: number) => {
             return <Product key={index} item={plant} cart={cart} setCart={setCart} />;

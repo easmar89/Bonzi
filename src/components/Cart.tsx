@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import productsInterface from "../model/productsInterface";
 
 interface Props {
   cart: object[];
@@ -6,9 +7,7 @@ interface Props {
 }
 
 export default function Cart({ cart, setCart }: Props) {
-  //   let [disabled, setDisabled] = useState(false);
-
-  function increateQuantity(id: number) {
+  function increaseQuantity(id: number) {
     let cartCopy = [...cart];
     let update: any = cartCopy.find((item: any) => item.id == id);
 
@@ -36,6 +35,11 @@ export default function Cart({ cart, setCart }: Props) {
     setCart(cartCopy);
   }
 
+  let totalPrice: number = 0;
+  cart.forEach((item: any) => {
+    totalPrice += item.price * item.quantity;
+  });
+
   return (
     <>
       <h2>Cart Items</h2>
@@ -48,7 +52,7 @@ export default function Cart({ cart, setCart }: Props) {
                 -
               </button>
               <p>{item.quantity}</p>
-              <button className="control-btn" onClick={() => increateQuantity(item.id)}>
+              <button className="control-btn" onClick={() => increaseQuantity(item.id)}>
                 +
               </button>
               <p>Left in stock: {item.stock - item.quantity}</p>
@@ -59,6 +63,7 @@ export default function Cart({ cart, setCart }: Props) {
           </section>
         );
       })}
+      <h2>{cart.length > 0 ? `Total price: $ ${totalPrice}` : null}</h2>
     </>
   );
 }

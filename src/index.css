@@ -83,3 +83,15 @@ input {
 .control-btn {
   width: 30px;
 }
+
+.search-bar {
+  display: flex;
+  gap: 1rem;
+  width: 300px;
+  margin: 6em auto;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+}

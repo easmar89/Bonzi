@@ -24,7 +24,9 @@ export default function App() {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  function updateSearchValue() {}
+  let showData = !searchValue
+    ? storedData
+    : storedData.filter((item) => item.title.toLowerCase().includes(searchValue));
 
   return (
     <>
@@ -32,12 +34,27 @@ export default function App() {
         <h1>Bonzi</h1>
         <Login />
       </header>
+      <div className="search-bar">
+        <label htmlFor="search">
+          <h3>Search</h3>
+        </label>
+        <input
+          className="search"
+          id="search"
+          type="text"
+          value={searchValue}
+          onChange={(e) => setSearchValue(e.target.value)}
+        />
+      </div>
       <main>
-        <input type="text" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
         <div className="products">
-          {storedData.map((plant: productsInterface, index: number) => {
-            return <Product key={index} item={plant} cart={cart} setCart={setCart} />;
-          })}
+          {showData ? (
+            showData.map((plant: productsInterface, index: number) => {
+              return <Product key={index} item={plant} cart={cart} setCart={setCart} />;
+            })
+          ) : (
+            <p>No items available with this search term</p>
+          )}
         </div>
         <div className="cart">
           <Cart cart={cart} setCart={setCart} />

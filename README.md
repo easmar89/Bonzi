@@ -9,6 +9,13 @@ Simple application to practice deploying with docker on Heroku!
 - `npm install`
 - `npm start`
 - `npm run test` for all test cases
+- For checking the app, you may use the following credentials:
+  - Account #1:
+    - username: user1
+    - password: user1
+  - Account #2:
+    - username: user2
+    - password: user2
 
 # User Stories
 
